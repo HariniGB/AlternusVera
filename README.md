@@ -133,10 +133,10 @@ opposite to CBOW. With the target word, skip-gram is the method to predict the w
 
 ## RESULT
 
-### Compare Counter vs TF-IDF vs Doc2Vec for Sentiment Analysis
+### Compare CountVectorizer vs TF-IDF vs Doc2Vec for Sentiment Analysis
 
 
-1. CounterVectorizer
+1. CountVectorizer
 
 
 | Models  | Accuracy |
@@ -171,8 +171,9 @@ opposite to CBOW. With the target word, skip-gram is the method to predict the w
 
 ---
 
-### Compare Counter vs TF-IDF vs Doc2Vec for Sensationalism
-1. CounterVectorizer
+### Compare CountVectorizer vs TF-IDF vs Doc2Vec for Sensationalism
+
+1. CountVectorizer
 
 
 | Models  | Accuracy |
