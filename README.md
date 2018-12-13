@@ -10,8 +10,16 @@ Name: **Harini Balakrishnan (010830755)**
 
 GitHub URL: https://github.com/HariniGB/AlternusVera
 
+## Business Problem 
 
-### Liar Liar Pants on Fire Dataset Description
+Fake news problem is too important to ignore especially after recent election of Donald Trump. These news are like malignant tumor that causes moral treats. It is nothing but a nassault on truth. Being impartial about the real news are same as that of a deliberate lies.
+
+The main purpose of this project is to identify essential features that can be trusted to predict if a news is fake or not. These features are realted to the news content. Our key classification is to predict if a news is fake or not based on these features. In addition, we are also intended to learn various deep learning and neural networking techniques and compare their performances.
+
+We initially as a team performend literature survey on list of features that has so far played major role in popularising a fake news. Each member of the team took one major feature and performed distillation process. We vectorized and came up with embedding vectors. Computed polynomial equation and classified the news articles based on all the below features.
+
+
+## Liar Liar Pants on Fire Dataset Description
 - It has 3 files test, training and valid.
 - Each file has 14 columns
 
@@ -35,7 +43,7 @@ GitHub URL: https://github.com/HariniGB/AlternusVera
 
     Column 14: the context (venue / location of the speech or statement).
 
-### Process of My Approach
+## Process of My Approach
 - Load the Data
 - Distillation Process
     - Data Cleaning and Text Preprocessing
@@ -60,7 +68,7 @@ GitHub URL: https://github.com/HariniGB/AlternusVera
     - RandomForestClassifier
 
 
-### Feature Selection
+## Feature Selection
 **Top Features Selected based on research articles**
 
 1. Political Affiliation
@@ -70,12 +78,13 @@ GitHub URL: https://github.com/HariniGB/AlternusVera
 5. Spam
 
 *Other simple features as a part of distillation:*
+
 6. Sentiment Analysis
 7. LDA Topic Modeling
 8. Ranking
 
 
-### Team Contributions:
+## Team Contributions:
 
 |Features  |  Member |
 |-----|-----|
@@ -86,7 +95,7 @@ GitHub URL: https://github.com/HariniGB/AlternusVera
 | Spam                                   |  All Memebers|
 
 
-### My Contributions:
+## My Contributions:
 
 | Versions | Features | DataEnrichment & Corpus | Explanation |
 |-----|-----|-----|-----|
@@ -210,6 +219,9 @@ opposite to CBOW. With the target word, skip-gram is the method to predict the w
 
 The Count vectorization Linear SVM outnumbered both the TF-IDF and Doc2Vec because CountVectorization performed binary vectorization of words. Whereas TF-IDF takes probabilistic approach and gives more accurate score for each word. Doc2Vec wasn't rich or big enough for the actual news because of the limited content which wasn't enough for the model to understand to generate sensible embedding.
 
-As my team we decided to classify the final vectorization using Doc2Vec. With 56% accuracy on sensationalism, we decided to provide **0.15** scalar weight for this feature in the polynomial equation.
+As my team we decided to classify the final vectorization using Doc2Vec. With 56% accuracy on sensationalism, we decided to provide **0.1** scalar weight for this feature in the polynomial equation.
 
 
+## RESULT
+
+As a team, we decided on the importance of the factors presented above. We brainstormed on the general pre-processing techniques we did want to use. We also had common visualization methods and similar techniques for evaluating the classification model accuracy. Each of us enriched the dataset with individual features and persisted it in a csv file. Each feature vector is persisted on csv (which is distilled with LDA, sentiment scores). We also came up with a polynomial equation based on the factors and the accuracy scores we received by classification. The polynomial equation is then used to build a model for fake news classification. The polynomial equation that we have used is **(0.6Clickbait) + (0.1 Sensationalism) + (0.2Political Affiliation Feature) + (0.1Context)**. The final model that we built is a variation of the stack ensemble technique. Stacked generalization is an ensemble method where the models are combined using another machine learning algorithm. The basic idea is to train machine learning algorithms with training dataset and then generate a new dataset with these models. Then this new dataset is used as input for the combined machine learning algorithm. The combined model is then used to predict the fakeness in the corpus. We as a team were able to achieve an accuracy of 57% using the various supervised learning techniques specified in this paper.
